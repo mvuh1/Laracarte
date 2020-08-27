@@ -2,7 +2,6 @@
 
 @section('content')
     <div class="container">
-        <br>
         <h2>What's {{ config('app.name') }}?</h2>
         <p>Laracart is clone of <a href="laramap.com" target="_blank">Laramap.com</a></p>
         <div class="row">

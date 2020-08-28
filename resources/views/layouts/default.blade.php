@@ -27,6 +27,9 @@
         footer {
             margin: 4em 0;
         }
+        .error{
+            color: #dc3545;
+        }
     </style>
 </head>
 

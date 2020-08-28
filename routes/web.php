@@ -12,3 +12,11 @@ Route::get('/about',[
 ]);
 
 Route::name('contact_path')->get('/contact','ContactsController@create');
+
+Route::name('contact_path')->post('/contact','ContactsController@store');
+
+/* Route::resource('/contact', 'ContactsController', ['names' => [
+    'create' => 'contact_path',
+    'store' => 'contact_path',
+]]); */
+

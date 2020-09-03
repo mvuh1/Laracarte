@@ -8,12 +8,15 @@
             <div class="col-md-6">
                 <p class="alert alert-warning">
                     <strong><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
-                    This app has been build by <a href="https://twitter.com/MvuhNazir">@MvuhNazir</a>
+                    This app has been build by
+                    <a href="https://twitter.com/MvuhNazir" target="_blank" rel="noopener noreferrer">
+                        @MvuhNazir
+                    </a>
                     for learning purpose.</strong>
                 </p>
             </div>
         </div>
-        <p>feel free to help to improve the <a href="#">source code</a></p>
+        <p>feel free to help to improve the <a href="https://github.com/mvuh1/Laracarte">source code</a></p>
 
         <hr>
 

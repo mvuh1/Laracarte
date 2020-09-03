@@ -3,7 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\ContactRequest;
+use App\Mail\ContactMessageCreated;
+use App\Models\Message;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
+use MercurySeries\Flashy\Flashy;
 
 class ContactsController extends Controller
 {
@@ -35,6 +39,23 @@ class ContactsController extends Controller
      */
     public function store(ContactRequest $request)
     {
+
+        //$message = Message::create($request->only('name', 'email', 'message'));
+
+        $message = new Message;
+        $message->name = $request->name;
+        $message->email = $request->email;
+        $message->message = $request->message;
+
+        // $message->save();
+        // ici on cree une instance de message avec des attributs
+        $theuser = 'nazirmvuh69@gmail.com'; #on recupère la valeur depuis le fichier de config
+        $mailable = new ContactMessageCreated($message);
+        Mail::to($theuser)->send($mailable);
+
+        Flashy::success('Nous vous repondrons dans les plus bref délais!');
+
+        return redirect(route('root_path'));
 
     }
 

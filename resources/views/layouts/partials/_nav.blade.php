@@ -1,4 +1,4 @@
-<nav class=" navbar navbar-expand-lg navbar-light bg-light">
+<nav class=" navbar navbar-expand-lg navbar-light bg-light sticky-top">
     <div class="container">
         <a class="navbar-brand" href="{{ route('root_path') }}"><span> {{ config('app.name') }} </span></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -47,3 +47,23 @@
     </div>
 </nav>
 <br>
+
+
+
+{{--  <nav class="navbar navbar-expand-md bg-dark sticky-top navbar-dark">
+    <a class="navbar-brand" href="#">Mon site</a>
+    <ul class="navbar-nav">
+        <li class="nav-item active">
+        <a class="nav-link" href="#">Accueil</a>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link" href="#">Témoignages</a>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link" href="#">Références</a>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link" href="#">Bibliographie</a>
+        </li>
+    </ul>
+</nav>  --}}

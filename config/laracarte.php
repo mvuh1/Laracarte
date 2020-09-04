@@ -2,6 +2,6 @@
 
 return [
 
-    'email' => env('ADMIN_SUPPORT_MAIL', 'nazirmvuh69@gmail.com')
+    'admin_suppotr_email' => 'nazirmvuh69@gmail.com'
 ];
 

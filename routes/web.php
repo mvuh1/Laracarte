@@ -7,9 +7,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/','PagesController@home')->name('root_path');
 
-Route::get('/test-mail',function(){
+/* Route::get('/test-mail',function(){
     return new ContactMessageCreated('Nazir', 'nazirmvuh69@gmail.com', "merci pour la formation j'adore");
-});
+}); */
 
 Route::get('/about',[
     'as' => 'about_path',

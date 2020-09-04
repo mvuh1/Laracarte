@@ -40,14 +40,14 @@ class ContactsController extends Controller
     public function store(ContactRequest $request)
     {
 
-        //$message = Message::create($request->only('name', 'email', 'message'));
+        $message = Message::create($request->only('name', 'email', 'message'));
+        // $message->save();
 
-        $message = new Message;
+        /* $message = new Message;
         $message->name = $request->name;
         $message->email = $request->email;
         $message->message = $request->message;
-
-        // $message->save();
+ */
         // ici on cree une instance de message avec des attributs
         $theuser = 'nazirmvuh69@gmail.com'; #on recupère la valeur depuis le fichier de config
         $mailable = new ContactMessageCreated($message);

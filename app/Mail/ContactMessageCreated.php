@@ -8,7 +8,7 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 
-class ContactMessageCreated extends Mailable
+class ContactMessageCreated extends Mailable implements ShouldQueue
 {
     use Queueable, SerializesModels;
 
@@ -31,6 +31,8 @@ class ContactMessageCreated extends Mailable
      */
     public function build()
     {
-        return $this->markdown('emails.messages.created');
+        $theuser = config('laracarte.admin_suppotr_email');
+        return $this->from($theuser)
+                    ->markdown('emails.messages.created');
     }
 }

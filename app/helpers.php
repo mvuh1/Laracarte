@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 
 if (! function_exists('page_title')) {
     function page_title($title){
-        $base_title = 'Laracarte - Liste of Artisans';
+        $base_title = config('app.name') .' - Liste of Artisans';
         if ($title === '') {
             return $base_title;
         }

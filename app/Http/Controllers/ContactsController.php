@@ -46,11 +46,11 @@ class ContactsController extends Controller
         /* $message = new Message;
         $message->name = $request->name;
         $message->email = $request->email;
-        $message->message = $request->message;
- */
+        $message->message = $request->message;*/
         // ici on cree une instance de message avec des attributs
-        $theuser = 'nazirmvuh69@gmail.com'; #on recupère la valeur depuis le fichier de config
+        $theuser = config('laracarte.admin_suppotr_email'); #on recupère la valeur depuis le fichier de config
         $mailable = new ContactMessageCreated($message);
+
         Mail::to($theuser)->send($mailable);
 
         Flashy::success('Nous vous repondrons dans les plus bref délais!');
